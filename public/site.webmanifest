@@ -1,0 +1,19 @@
+{
+  "name": "INFLUENCER PRO",
+  "short_name": "InfluencerPro",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png?v=3",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png?v=3",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#07050E",
+  "background_color": "#07050E",
+  "display": "standalone"
+}

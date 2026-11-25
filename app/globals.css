@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-inter: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+:root {
+  --primary-purple: #B13CFF;
+  --secondary-purple: #762CFF;
+  --accent-blue: #63C7FF;
+  --accent-pink: #FF2E93;
+  --accent-red: #FF2A55;
+  --accent-green: #10B981;
+
+  --bg-main: #07050E;
+  --bg-card: #120D22;
+  --bg-card-hover: #18112E;
+  --bg-border: #231A3D;
+
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color-scheme: dark;
+}
+
+*, ::before, ::after {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html, body {
+  background-color: #07050E;
+  color: #FFFFFF;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbars */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #07050E;
+}
+::-webkit-scrollbar-thumb {
+  background: #231A3D;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #762CFF;
+}
+
+/* Frame Editor dual-handle trim scrubber (VideoTrimBar): two overlapping
+   range inputs share one track, so only each thumb — not the full-width
+   track — may capture pointer events, or dragging one input would block
+   the other. */
+.trim-thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #B13CFF;
+  border: 2px solid #FFFFFF;
+  cursor: pointer;
+}
+.trim-thumb::-moz-range-thumb {
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #B13CFF;
+  border: 2px solid #FFFFFF;
+  cursor: pointer;
+}
+.trim-thumb::-moz-range-track {
+  background: transparent;
+}
+
+@layer base {
+  button:not(:disabled):not([aria-disabled="true"]),
+  [role="button"]:not([aria-disabled="true"]),
+  a[href],
+  summary,
+  label[for],
+  select:not(:disabled),
+  input[type="submit"]:not(:disabled),
+  input[type="button"]:not(:disabled),
+  input[type="reset"]:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
